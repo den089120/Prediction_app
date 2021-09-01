@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="index.css" rel="stylesheet" type="text/css">
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" data-id="Home">Домашняя страница</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-id="registration">Регистрация</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-id="prediction">Предсказания</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-id="login_in">Войти</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container" id="createBody">
+
+        </div>
+        <div class="popup" id="popup">
+            <div class="popup_body">
+                <div class="popup_content" data-id="popup_content">
+                    <a class="popup_close">X</a>
+                    <div class="popup_img"></div>
+                    <div class="popup_title"></div>
+                    <div class="popup_text"></div>
+                </div>
+            </div>
+        </div>
+        <script src="constant.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
