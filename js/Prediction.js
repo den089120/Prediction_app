@@ -10,7 +10,7 @@ class Prediction {
                 <div class="text-center">
                     <button class="btn btn-primary m-auto" data-id="createCanvas">Нажмите для генерации</button>
                 </div>
-                <p class="card-text" data-id="descCard">Описание гексаграммы</p>
+                <p class="card-text text-center" data-id="descCard">Описание гексаграммы</p>
              </div>
          </div>
       `

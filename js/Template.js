@@ -27,24 +27,26 @@ class Template {
       return `
       <form>
         <div class="mb-3">
-            <label for="exampleInputFullName" class="form-label">Full Name</label>
-            <input type="email" class="form-control" id="exampleInputFullName" aria-describedby="fullNameHelp">
-            <div id="fullNameHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <label for="exampleInputFullName" class="form-label">Введите ваше Имя и Фамилию</label>
+            <input type="text" class="form-control" id="exampleInputFullName" aria-describedby="fullNameHelp" data-id="full_name">
+            <div id="fullNameHelp" class="form-text" data-id="name_comment">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <label for="exampleInputEmail1" class="form-label">Введите вашу электронную почту</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" data-id="email">
+            <div id="emailHelp" class="form-text" data-id="email_comment">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="exampleInputPassword1" class="form-label">Придумайте пароль</label>
+            <div class="btn btn-primary" data-id="createPassword">Сгенерировать пароль</div>
+            <input type="password" class="form-control" id="exampleInputPassword1" data-id="new_password">
+            <div class="form-text" data-id="password_comment">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword2" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword2">
+            <label for="exampleInputPassword2" class="form-label">Повторите пероль</label>
+            <input type="password" class="form-control" id="exampleInputPassword2" data-id="duplicate_password">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary" data-id="btn_submit">Зарегистрироваться</button>
       </form>
       `
    }

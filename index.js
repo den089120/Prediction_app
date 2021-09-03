@@ -283,6 +283,7 @@ const nav = new Template()
 const pred = new Prediction()
 const table = new PredictionTable()
 const popup = new ModalWindow()
+const form = new FormControl()
 
 let count = 1
 let bin = []
@@ -300,6 +301,29 @@ document.body.addEventListener('click', (e)=> {
          navList.forEach(el=> el.classList.remove('active'))
          e.target.classList.add('active')
          body.innerHTML = nav.navReg()
+
+         let fullName = document.body.querySelector('[data-id="full_name"]')
+         let nameComment = document.body.querySelector('[data-id="name_comment"]')
+         let email = document.body.querySelector('[data-id="email"]')
+         let emailComment = document.body.querySelector('[data-id="email_comment"]')
+         let password = document.body.querySelector('[data-id="new_password"]')
+         let passComment = document.body.querySelector('[data-id="password_comment"]')
+         let pass2 = document.body.querySelector('[data-id="duplicate_password"]')
+
+
+         form.fullName(fullName, nameComment)
+         form.email_In(email, emailComment)
+         form.password_In(password, passComment)
+         form.duplPass_In(pass2, passComment)
+
+         break;
+      case 'createPassword':
+         let password1 = document.body.querySelector('[data-id="new_password"]')
+         let password2 = document.body.querySelector('[data-id="duplicate_password"]')
+         form.createPassword(password1, password2)
+         break;
+      case 'btn_submit':
+         form.submit_In(e)
          break;
       case 'start_create':
          let arrVal = stores.getStore() !== null ? Object.values(stores.getStore()) : null
