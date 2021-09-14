@@ -1,4 +1,4 @@
-class drawCanvas {
+class DrawCanvas {
    constructor(id) {
       this.parentNode = id !== null ? document.body.querySelector(`${id}`) : id
    }

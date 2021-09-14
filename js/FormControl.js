@@ -1,5 +1,6 @@
-class FormControl {
+class FormControl extends Store {
    constructor() {
+      super()
       this.NAME_LENGTH = 3
       this.EMAIL_LENGTH = 5
       this.PASSWORD_LENGTH = 8
@@ -101,16 +102,23 @@ class FormControl {
       if (this.isValid()) {
          let id = Object.keys(this.validation)
          id = id.filter(el=> el !== 'duplicate_password')
-         console.log(id)
+
+
          id.forEach(el => {
             objUser[el] = document.body.querySelector(`[data-id="${el}"]`).value
          })
-         console.log(objUser)
-         e.stopPropagation()
 
-         this.fetchUser('POST', this.url, JSON.stringify(objUser)).then(data =>{
-            console.log(data)
-         })
+
+         e.stopPropagation()
+         if (this.isUser(objUser)) {
+            window.alert('Такой пользователь уже зарегистрирован')
+         } else {
+            this.setUser(objUser, ROLE_USER)
+         }
+
+         // this.fetchUser('POST', this.url, JSON.stringify(objUser)).then(data =>{
+         //    console.log(data)
+         // })
       }
       else {
          console.log('not found')
