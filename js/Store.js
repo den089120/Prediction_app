@@ -2,8 +2,6 @@ class Store {
    constructor() {
       this.key = 'Prediction_app'
       this.userKey = 'email'
-      this.userNickName = ''
-      this.roleUser = ''
       this.keyUsers = 'usersKey'
       this.storeQues = 'questions'
       this.storePred = 'predictions'
@@ -164,14 +162,5 @@ class Store {
    isUser(obj) {
       let key = obj[this.userKey]
       return (this.getUser(key) !== null)
-   }
-
-   template(objQues = {}, objPred = {}) {
-      return {[this.userNickName]: {
-            [this.storeQues]: objQues,
-            [this.storePred]: objPred
-         }
-      }
-
    }
 }
